@@ -12,9 +12,8 @@ import com.example.helloandroid.R // Replace with your actual package name if di
 
 class MainActivity : AppCompatActivity() {
 
-    // Define a constant for the key used to pass data
     companion object {
-        const val BUTTON_INFO= "button_info"
+        const val BUTTON_INFO= "button_info" //used copilot for this
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,16 +27,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Find your buttons by their IDs
-        val button1: Button = findViewById(R.id.button_show_info_1) // Assuming 'button' is your first button's ID
+        //Used copilot for this code
+        val button1: Button = findViewById(R.id.button_show_info_1)
         val button2: Button = findViewById(R.id.button_show_info_2)
         val button3: Button = findViewById(R.id.button_show_info_3)
         val button4: Button = findViewById(R.id.button_show_info_4)
         val button5: Button = findViewById(R.id.button_show_info_5)
-        // Assuming you have a fifth button with id 'button5'
-        // If not, you'll need to add it to your activity_main.xml and find it here
-        // For example:
-        // val button5: Button = findViewById(R.id.button5)
+
 
 
         // Set click listeners for each button

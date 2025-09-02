@@ -6,8 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.helloandroid.R // Replace with your actual package name if different
-
+import com.example.helloandroid.R
+import com.example.helloandroid.MainActivity
 
 class DetailActivity : AppCompatActivity() {
 
