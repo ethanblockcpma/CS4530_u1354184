@@ -15,8 +15,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit // For extra credit
-import androidx.compose.material3.* // Using Material 3
+import androidx.compose.material.icons.filled.Edit 
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -47,7 +47,7 @@ fun CourseAppScreen(viewModel: CourseViewModel) {
     var departmentInput by remember { mutableStateOf("") }
     var courseNumberInput by remember { mutableStateOf("") }
     var locationInput by remember { mutableStateOf("") }
-    var editingCourse by remember { mutableStateOf<Course?>(null) } // For extra credit
+    var editingCourse by remember { mutableStateOf<Course?>(null) } 
 
     Scaffold(
         topBar = {
@@ -69,14 +69,14 @@ fun CourseAppScreen(viewModel: CourseViewModel) {
                 onLocationChange = { locationInput = it },
                 isEditing = editingCourse != null,
                 onAddOrUpdateCourse = {
-                    if (editingCourse == null) { // Adding
+                    if (editingCourse == null) { 
                         if (departmentInput.isNotBlank() && courseNumberInput.isNotBlank() && locationInput.isNotBlank()) {
                             viewModel.addCourse(departmentInput, courseNumberInput, locationInput)
                             departmentInput = ""
                             courseNumberInput = ""
                             locationInput = ""
                         }
-                    } else { // Updating (Extra Credit)
+                    } else { // ec
                         if (departmentInput.isNotBlank() && courseNumberInput.isNotBlank() && locationInput.isNotBlank()) {
                             viewModel.updateCourse(
                                 editingCourse!!.copy(
@@ -202,7 +202,7 @@ fun CourseListItem(
     ) {
         Text(course.courseName, style = MaterialTheme.typography.bodyLarge)
         Row {
-            IconButton(onClick = { onEditClick(course) }) { // Extra Credit
+            IconButton(onClick = { onEditClick(course) }) {
                 Icon(imageVector = Icons.Default.Edit, contentDescription = "Edit Course")
             }
             IconButton(onClick = { onDeleteClick(course) }) {
